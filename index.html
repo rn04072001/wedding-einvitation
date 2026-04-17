@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== 基本 ===== */
+body {
+    margin: 0;
+    font-family: "Noto Serif TC", serif;
+    color: #333;
+}
+
+.en {
+    font-family: "Playfair Display", serif;
+}
+
+/* ===== 封面 ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 70vh;
+    margin: 0 auto;
+    background: url("photo5.jpg");
+    background-size: cover;
+    background-position: 45% 50%;
+    background-repeat: no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 75%;
+    left: -5%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+/* ===== 新人（錯位） ===== */
+.couple {
+    position: relative;
+    height: 900px;
+    padding: 100px 20px;
+}
+
+.couple img {
+    width: 360px;
+    position: absolute;
+}
+
+.groom {
+    top: 80px;
+    left: 8%;
+}
+
+.bride {
+    bottom: 80px;
+    right: 8%;
+}
+
+.names {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* ===== 日期照片 ===== */
+.section {
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.section img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center 10%;
+    position: relative;
+    z-index: 1;
+}
+
+.date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    letter-spacing: 3px;
+    z-index: 3;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== 地圖 ===== */
+.location {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.location-title {
+    font-size: 28px;
+}
+
+.location-title span {
+    display: block;
+    margin-left: 80px;
+}
+
+.map-box {
+    margin: 10px auto;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #ddd;
+    position: relative;
+}
+
+/* 👉 修正不滿版 */
+.map-box img {
+    width: auto;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+    margin: 0 auto;
+}
+
+.map-text {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.map-link {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: #ffffff80;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.map-link:hover {
+    background: #eee;
+    color: #000;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* ===== 婚紗照 ===== */
+.gallery {
+    padding: 80px 20px;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-row img {
+    width: 33%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+/* ===== 倒數 ===== */
+.countdown {
+    text-align: center;
+    padding: 60px;
+    font-size: 24px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 封面 -->
+<section class="hero">
+    <div class="hero-text">
+        徐生有李，聚在這裡
+    </div>
+</section>
+
+<!-- 新人 -->
+<section class="couple">
+    <img src="photo8.jpg" class="groom">
+    <img src="photo7.jpg" class="bride">
+
+    <div class="names">
+        徐王麟 & 李亦晴<br><br>
+        We tied the knot.
+    </div>
+</section>
+
+<!-- 日期 -->
+<section class="section">
+    <div class="date en">10.03</div>
+    <img src="photo9.jpg">
+</section>
+
+<!-- 地圖 -->
+<section class="location">
+    <div class="location-title en">
+        How to
+        <span>get there</span>
+    </div>
+
+    <div class="map-box">
+        <a class="map-link" href="https://maps.app.goo.gl/QE6gDtQd72aYG2VS8" target="_blank">
+            查看 Google 地圖
+        </a>
+
+        <img src="JUN_0172.jpg">
+
+        <div class="map-text">
+            茹曦酒店<br>捷運
+        </div>
+    </div>
+</section>
+
+<!-- 婚紗照 -->
+<section class="gallery">
+    <div class="gallery-row">
+        <img src="photo4.jpg">
+        <img src="photo3.jpg">
+        <img src="photo5.jpg">
+    </div>
+</section>
+
+<!-- 倒數 -->
+<section class="countdown en" id="countdown"></section>
+
+<script>
+const weddingDate = new Date("2026-10-03T12:30:00");
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    document.getElementById("countdown").innerHTML = days + " DAYS";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>

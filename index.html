@@ -58,6 +58,14 @@ body {
     padding: 100px 20px;
 }
 
+.couple-desktop{
+  display: block;
+}
+
+.couple-mobile{
+  display: none;
+}
+
 .couple img {
     width: 360px;
     position: absolute;
@@ -275,6 +283,13 @@ gap:18px;
 overflow:hidden;
 }
 
+.couple-desktop{
+    display: none;
+  }
+  .couple-mobile{
+    display: flex;
+  }
+
 /* 清除桌機定位 */
 .groom,
 .bride{
@@ -423,10 +438,31 @@ line-height:1.4;
 <section class="couple">
     <img src="photo8.jpg" class="groom">
     <img src="photo7.jpg" class="bride">
-
+    
+<div class="couple-desktop">
     <div class="names">
         徐王麟 & 李亦晴<br>We tied the knot.
     </div>
+<div>
+
+<div class="couple-mobile">
+    <div class="couple-mobile">
+
+  <div class="groom">
+    <img src="photo8" alt="groom">
+    <div class="name-vertical"徐王麟</div>
+  </div>
+
+  <div class="center-text">
+    We tied the knot.
+  </div>
+
+  <div class="bride">
+    <div class="name-vertical">李亦晴</div>
+    <img src="photo7" alt="bride">
+  </div>
+
+</div>
 </section>
 
 <!-- 日期 -->

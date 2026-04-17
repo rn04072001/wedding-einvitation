@@ -232,119 +232,162 @@ letter-spacing:2px;
 width:90%;
 }
 
+/* ===================================
+   手機版專用（重新編寫）
+   貼在 style 最下面即可
+=================================== */
+@media screen and (max-width: 768px) {
 
-/* ===== 新人（手機版重做） ===== */
-.couple{
-position:relative !important;
-height:auto !important;
-padding:70px 20px !important;
-display:flex !important;
-height:520px !improtant;
-flex-direction:column !important;
-align-items:center !important;
-justify-content:center !important;
-gap:18px !important;
+body{
+    overflow-x:hidden;
 }
 
-/* 解除桌機 absolute */
+/* ===== 封面 ===== */
+.hero{
+    width:100% !important;
+    height:100vh !important;
+    margin:0 !important;
+    background-size:cover !important;
+    background-position:center center !important;
+}
+
+.hero-text{
+    top:78% !important;
+    left:50% !important;
+    right:auto !important;
+    transform:translate(-50%,-50%) !important;
+    width:90%;
+    font-size:28px !important;
+    line-height:1.5;
+    letter-spacing:2px;
+    text-align:center;
+}
+
+/* ===== 新人介紹 ===== */
+.couple{
+    position:relative !important;
+    height:520px !important;
+    padding:50px 15px !important;
+}
+
+/* 照片縮小＋錯位 */
 .groom,
 .bride{
-position:absolute !important;
-width:58% !important;
-max-width:230px !important;
+    position:absolute !important;
+    width:58% !important;
+    max-width:220px !important;
+    height:auto;
+}
 
 .groom{
-top:20px !important;
-left:5% !important;
+    top:20px !important;
+    left:4% !important;
 }
 
 .bride{
-bottom:20px !important;
-right:5% !important;
+    bottom:20px !important;
+    right:4% !important;
 }
 
+/* 文字重疊中間 */
 .names{
-position:absolute !important;
-top:50% !important;
-left:50% !important;
-transform:translate(-50%,-50%) !important;
-z-index:5;
-font-size:20px !important;
-line-height:1.8;
-background:rgba(255,255,255,0.65)
-padding:12px 18px;
+    position:absolute !important;
+    top:50% !important;
+    left:50% !important;
+    transform:translate(-50%,-50%) !important;
+    width:78%;
+    font-size:20px !important;
+    line-height:1.8;
+    text-align:center;
+    z-index:5;
+    background:rgba(255,255,255,0.68);
+    padding:12px 10px;
 }
 
 /* ===== 日期照片 ===== */
 .section{
-margin-top:20px;
+    margin-top:10px;
+}
+
+.section::before{
+    top:8px !important;
+    left:8px !important;
+    right:8px !important;
+    bottom:8px !important;
 }
 
 .section img{
-height:10vh !important;
+    width:100%;
+    height:34vh !important;
+    object-fit:cover;
+    object-position:center 20%;
 }
 
 .date{
-font-size:28px !important;
-top:50% !important;
+    font-size:26px !important;
+    letter-spacing:2px;
 }
 
 /* ===== 地圖 ===== */
 .location{
-padding:70px 15px !important;
+    padding:55px 15px !important;
 }
 
 .location-title{
-font-size:30px !important;
+    font-size:28px !important;
 }
 
 .location-title span{
-margin-left:50px !important;
+    margin-left:58px !important;
 }
 
 .map-box{
-width:100% !important;
-padding:20px 15px !important;
-box-sizing:border-box;
-}
-
-.map-link{
-position:absolute;
-top:18px !important;
-left:50%;
-transform:translateX(-50%);
-font-size:14px !important;
-padding:8px 18px !important;
-white-space:nowrap;
+    width:100% !important;
+    padding:15px !important;
+    box-sizing:border-box;
+    overflow:hidden;
 }
 
 .map-box img{
-width:100% !important;
-max-width:none !important;
-height:auto;
+    width:100% !important;
+    max-width:none !important;
+    height:auto;
+    display:block;
+}
+
+/* 按鈕置中往下 */
+.map-link{
+    top:52% !important;
+    left:50% !important;
+    transform:translate(-50%,-50%) !important;
+    font-size:13px !important;
+    padding:8px 18px !important;
+    white-space:nowrap;
+    z-index:5;
 }
 
 /* ===== 婚紗照 ===== */
 .gallery{
-padding:50px 12px !important;
+    padding:45px 12px !important;
 }
 
 .gallery-row{
-display:grid !important;
-grid-template-columns:1fr;
-gap:12px;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
 }
 
 .gallery-row img{
-width:100% !important;
-height:420px;
-object-fit:cover;
+    width:100% !important;
+    height:280px !important;
+    object-fit:cover;
+    border-radius:6px;
 }
 
 /* ===== 倒數 ===== */
 .countdown{
-font-size:24px !important;
-padding:50px 20px !important;
+    padding:45px 20px !important;
+    font-size:22px !important;
 }
 
 }

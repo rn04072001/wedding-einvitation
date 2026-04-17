@@ -240,8 +240,6 @@ letter-spacing:2px;
 width:90%;
 }
 
-@media screen and (max-width:768px){
-
 /* ===== 基本 ===== */
 html,body{
 margin:0;
@@ -272,64 +270,45 @@ z-index:5;
 }
 
 /* ===== 新人區塊（重做） ===== */
-.couple{
-position:relative !important;
-height:auto !important;
-padding:60px 20px !important;
-display:flex !important;
-flex-direction:column !important;
-align-items:center !important;
-gap:18px;
-overflow:hidden;
-}
-
 .couple-desktop{
-    display: none;
-  }
-  .couple-mobile{
+display: none;
+}
+
+.couple-mobile{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 60px 20px;
+}
+
+.groom-box,
+  .bride-box{
     display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 35%;
   }
 
-/* 清除桌機定位 */
-.groom,
-.bride{
-position:static !important;
-top:auto !important;
-bottom:auto !important;
-left:auto !important;
-right:auto !important;
-width:72% !important;
-max-width:260px !important;
-height:auto;
-display:block;
-}
+  .groom-box img,
+  .bride-box img{
+    width: 70px;
+    height: auto;
+  }
 
-/* 第一張往左 */
-.groom{
-margin-right:20%;
-}
+  .name-vertical{
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
 
-/* 第二張往右 */
-.bride{
-margin-left:20%;
-margin-top:40px;
-}
+  .center-text{
+    width: 30%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+  }
 
-/* 文字壓在中間 */
-.names{
-position:absolute !important;
-top:50% !important;
-left:50% !important;
-transform:translate(-50%,-50%) !important;
-width:78%;
-font-size:20px !important;
-line-height:0.8;
-text-align:center;
-z-index:10;
-background:rgba(0,0,0,0);
-padding:14px 10px;
 }
-
 /* ===== 日期照片 ===== */
 .section{
 position:relative;
@@ -436,33 +415,36 @@ line-height:1.4;
 
 <!-- 新人 -->
 <section class="couple">
-    <img src="photo8.jpg" class="groom">
-    <img src="photo7.jpg" class="bride">
-    
+
+<!-- 桌機版 -->
 <div class="couple-desktop">
-    <div class="names">
-        徐王麟 & 李亦晴<br>We tied the knot.
-    </div>
-<div>
+<img src="photo8.jpg" class="groom">
+<img src="photo7.jpg" class="bride">
 
+<div class="names">
+徐王麟 & 李亦晴<br>We tied the knot.
+</div>
+</div>
+
+<!-- 手機版 -->
 <div class="couple-mobile">
-    <div class="couple-mobile">
 
-  <div class="groom">
-    <img src="photo8" alt="groom">
-    <div class="name-vertical"徐王麟</div>
-  </div>
+<div class="groom-box">
+<img src="photo8.jpg">
+<div class="name-vertical">徐王麟</div>
+</div>
 
-  <div class="center-text">
-    We tied the knot.
-  </div>
+<div class="center-text">
+We tied the knot.
+</div>
 
-  <div class="bride">
-    <div class="name-vertical">李亦晴</div>
-    <img src="photo7" alt="bride">
-  </div>
+<div class="bride-box">
+<div class="name-vertical">李亦晴</div>
+<img src="photo7.jpg">
+</div>
 
 </div>
+
 </section>
 
 <!-- 日期 -->

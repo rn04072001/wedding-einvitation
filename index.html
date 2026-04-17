@@ -201,95 +201,132 @@ body {
     font-size: 24px;
 }
 
-/* ===== 手機版修正 ===== */
-@media (max-width: 768px) {
 
+/* =========================
+手機版專用
+========================= */
+@media screen and (max-width: 768px){
+
+/* 全域 */
+body{
+overflow-x:hidden;
+}
+
+/* ===== 封面 ===== */
 .hero{
-    width: 100%;
-    height: 100vh;
-    background-position
-: center;
+width:100% !important;
+height:100vh !important;
+max-width:none !important;
+margin:0 !important;
+background-position:center center !important;
+background-size:cover !important;
 }
 
 .hero-text{
-    top: 78%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 26px;
-    width: 90%;
-    letter-spacing: 2px;
+top:78% !important;
+left:50% !important;
+transform:translate(-50%,-50%) !important;
+font-size:28px !important;
+line-height:1.5;
+letter-spacing:2px;
+width:90%;
 }
 
+/* ===== 新人 ===== */
 .couple{
-    height: 650px;
-    padding: 60px 20px;
+height:auto !important;
+padding:70px 20px !important;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
 }
 
 .couple img{
-    width: 42%;
-}
-
-.groom{
-    top: 30px;
-    left: 5%;
-}
-
-.bride{
-    bottom: 30px;
-    right: 5%;
+position:static !important;
+width:78% !important;
+max-width:320px;
+display:block;
 }
 
 .names{
-    font-size: 18px;
-    width: 90%;
+position:static !important;
+transform:none !important;
+font-size:22px !important;
+line-height:1.8;
+margin-top:10px;
+}
+
+/* ===== 日期照片 ===== */
+.section{
+margin-top:20px;
 }
 
 .section img{
-    height: 45vh;
+height:52vh !important;
 }
 
 .date{
-    font-size: 24px;
+font-size:28px !important;
+top:50% !important;
 }
 
+/* ===== 地圖 ===== */
 .location{
-    padding: 60px 15px;
+padding:70px 15px !important;
 }
 
 .location-title{
-    font-size: 24px;
+font-size:30px !important;
 }
 
 .location-title span{
-    margin-left: 40px;
+margin-left:30px !important;
 }
 
 .map-box{
-    width: 92%;
-    padding: 15px;
+width:100% !important;
+padding:20px 15px !important;
+box-sizing:border-box;
 }
 
 .map-link{
-    top: 20px;
-    font-size: 13px;
-    padding: 8px 16px;
+position:absolute;
+top:18px !important;
+left:50%;
+transform:translateX(-50%);
+font-size:14px !important;
+padding:8px 18px !important;
+white-space:nowrap;
 }
 
+.map-box img{
+width:100% !important;
+max-width:none !important;
+height:auto;
+}
+
+/* ===== 婚紗照 ===== */
 .gallery{
-    padding: 60px 10px;
+padding:50px 12px !important;
 }
 
 .gallery-row{
-    gap: 6px;
+display:grid !important;
+grid-template-columns:1fr;
+gap:12px;
 }
 
 .gallery-row img{
-    width: 33.3%;
+width:100% !important;
+height:420px;
+object-fit:cover;
 }
 
+/* ===== 倒數 ===== */
 .countdown{
-    font-size: 20px;
-    padding: 40px;
+font-size:24px !important;
+padding:50px 20px !important;
 }
 
 }

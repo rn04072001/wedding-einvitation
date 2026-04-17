@@ -117,17 +117,6 @@ body {
     z-index: 3;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* ===== 地圖 ===== */
 .location {
     padding: 80px 20px;
@@ -210,6 +199,99 @@ body {
     text-align: center;
     padding: 60px;
     font-size: 24px;
+}
+
+/* ===== 手機版修正 ===== */
+@media (max-width: 768px) {
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-position
+: center;
+}
+
+.hero-text{
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    width: 90%;
+    letter-spacing: 2px;
+}
+
+.couple{
+    height: 650px;
+    padding: 60px 20px;
+}
+
+.couple img{
+    width: 42%;
+}
+
+.groom{
+    top: 30px;
+    left: 5%;
+}
+
+.bride{
+    bottom: 30px;
+    right: 5%;
+}
+
+.names{
+    font-size: 18px;
+    width: 90%;
+}
+
+.section img{
+    height: 45vh;
+}
+
+.date{
+    font-size: 24px;
+}
+
+.location{
+    padding: 60px 15px;
+}
+
+.location-title{
+    font-size: 24px;
+}
+
+.location-title span{
+    margin-left: 40px;
+}
+
+.map-box{
+    width: 92%;
+    padding: 15px;
+}
+
+.map-link{
+    top: 20px;
+    font-size: 13px;
+    padding: 8px 16px;
+}
+
+.gallery{
+    padding: 60px 10px;
+}
+
+.gallery-row{
+    gap: 6px;
+}
+
+.gallery-row img{
+    width: 33.3%;
+}
+
+.countdown{
+    font-size: 20px;
+    padding: 40px;
+}
+
 }
 
 </style>

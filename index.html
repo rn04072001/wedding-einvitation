@@ -13,7 +13,8 @@ section{width:100%;}
 
 .hero{height:100vh;position:relative;width:min(72vh,100%);margin:0 auto;background:url('photo5.jpg') center/cover no-repeat;}
 .hero:after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.35);}
-.hero-text{position:absolute;z-index:2;left:-5%;top:78%;transform:translate(-50%,-50%);font-size:42px;letter-spacing:4px;text-align:center;width:90%;}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:translateY(0);} }
+.hero-text{position:absolute;z-index:2;left:-5%;top:78%;transform:translate(-50%,-50%);font-size:42px;letter-spacing:4px;text-align:center;width:90%;opacity:0;animation:heroFadeUp 1.4s ease forwards;}
 
 .couple{
 max-width:1200px;
@@ -63,9 +64,7 @@ align-items:center;
 }
 .couple-mobile{display:none}
 
-.section{
-position:relative;
-}
+.section{position:relative;}
 .section img{
 width:100%;
 height:90vh;
@@ -160,7 +159,7 @@ font-size:28px;
 }
 
 @media (max-width:768px){
-.hero-text{left:50%;bottom:28px;translatex(-50%);text-align:center;font-size:28px;letter-spacing:2px;}
+.hero-text{left:50%;bottom:18px;translatex(-50%);text-align:center;font-size:28px;letter-spacing:2px;}
 
 .couple{padding:55px 16px}
 .couple-desktop{display:none}

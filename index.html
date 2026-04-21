@@ -60,32 +60,21 @@ color:#222;
 /* =====================
    新人（電腦）
 ===================== */
-.couple{
-position:relative;
-max-width:1000px;
-margin:0 auto;
-padding:90px 20px;
-height:720px;
-}
+.couple{position:relative; height:900px; padding:100px 20px;}
 
-.couple img{
-width:32%;
-max-width:320px;
-height:auto;
-border-radius:10px;
-position:absolute;
-}
-
+.couple-desktop{display: block;}
+.couple-mobile{display: none;}
+.couple img{width: 360px; position: absolute;}
 /* 男生：左上 */
 .groom{
-left:12%;
-top:40px;
+left:8%;
+top:80px;
 }
 
 /* 女生：右下 */
 .bride{
-right:12%;
-bottom:40px;
+right:8%;
+bottom:80px;
 }
 
 /* 中間文字 */
@@ -95,10 +84,8 @@ left:50%;
 top:50%;
 transform:translate(-50%,-50%);
 text-align:center;
-font-size:28px;
+font-size:25px;
 line-height:1.7;
-width:360px;
-z-index:5;
 }
 
 /* =====================
@@ -204,38 +191,46 @@ white-space:nowrap;
 }
 
 /* 新人 */
-.couple{
-height:360px;
-padding:20px 10px;
-}
+.couple-desktop{
+    display: none;
+  }
 
-/* 照片尺寸 */
-.couple img{
-width:34%;
-max-width:130px;
-}
+  .couple-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+  }
 
-/* 男生左上 */
-.groom{
-left:8%;
-top:20px;
-}
+  .groom-box,
+  .bride-box{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 35%;
+  }
 
-/* 女生右下 */
-.bride{
-right:8%;
-bottom:20px;
-}
+  .groom-box img,
+  .bride-box img{
+    width: 70px;
+    height: auto;
+  }
 
-/* 中間文字 */
-.names{
-font-size:16px;
-width:120px;
-line-height:1.4;
-}
+  .name-vertical{
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .center-text{
+    width: 30%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+  }
 
 }
-
+   
 /* 日期 */
 .date-section img{
 height:40vh;
@@ -266,17 +261,14 @@ transform:translate(-50%,-50%) scale(1.05);
 <!-- 新人 -->
 <section class="couple">
 
-<div class="groom">
-<img src="photo8.jpg">
-</div>
+<!-- 桌機版 -->
+<div class="couple-desktop">
+<img src="photo8.jpg" class="groom">
+<img src="photo7.jpg" class="bride">
 
 <div class="names">
-徐王麟 &amp; 李亦晴<br>
-<span class="en">we tied the knot.</span>
+徐王麟 & 李亦晴<br>We tied the knot.
 </div>
-
-<div class="bride">
-<img src="photo7.jpg">
 </div>
 
 </section>
@@ -284,21 +276,21 @@ transform:translate(-50%,-50%) scale(1.05);
 <!-- 手機新人 -->
 <section class="mobile-couple">
 
-<div class="groom-mobile">
-<div class="name-v">徐王麟</div>
+<div class="groom-box">
 <img src="photo8.jpg">
+<div class="name-vertical">徐王麟</div>
 </div>
 
-<div class="center-text en">
+<div class="center-text">
 We<br>
 tied<br>
 the<br>
 knot
 </div>
 
-<div class="bride-mobile">
+<div class="bride-box">
+<div class="name-vertical">李亦晴</div>
 <img src="photo7.jpg">
-<div class="name-v">李亦晴</div>
 </div>
 
 </section>

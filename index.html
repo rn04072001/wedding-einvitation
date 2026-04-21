@@ -3,93 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
 
 <style>
 
-/* =====================
+/* ======================
    基本
-===================== */
+====================== */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-font-family:'Noto Serif TC',serif;
+font-family:"Noto Serif TC",serif;
 color:#333;
-overflow-x:hidden;
 }
 
-.en{font-family:'Playfair Display',serif;}
+.en{font-family:"Playfair Display",serif;}
 
+/* ======================
+   SECTION
+====================== */
 section{
 width:100%;
+position:relative;
 }
 
-/* =====================
-   封面
-===================== */
+/* ======================
+   1. 封面
+====================== */
 .hero{
-position:relative;
 height:100vh;
-width:100%;
 background:url("photo5.jpg") center center no-repeat;
 background-size:auto 100%;
-overflow:hidden;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(255,255,255,0.18);
+position:relative;
 }
 
 .hero-text{
 position:absolute;
-z-index:2;
-left:34%;
-bottom:16%;
-transform:translateX(-50%);
-font-size:38px;
-letter-spacing:3px;
+left:38%;
+bottom:18%;
+font-size:40px;
 white-space:nowrap;
-color:#222;
+animation:fade 1s ease;
 }
 
-/* =====================
-   新人（電腦）
-===================== */
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* ======================
+   2. 新人區（電腦）
+====================== */
 .couple{
-position:relative;
 max-width:1000px;
-margin:0 auto;
-padding:90px 20px;
-height:720px;
+margin:auto;
+height:700px;
+position:relative;
 }
 
-/* 圖片 */
 .couple img{
-width:32%;
-max-width:320px;
-height:auto;
+width:320px;
 border-radius:10px;
 position:absolute;
 }
 
-/* 男生 左上 */
 .groom{
-left:8%;
+left:10%;
 top:40px;
 }
 
-/* 女生 右下 */
 .bride{
-right:8%;
+right:10%;
 bottom:40px;
 }
 
-/* 中間文字 */
 .names{
 position:absolute;
 left:50%;
@@ -97,23 +87,29 @@ top:50%;
 transform:translate(-50%,-50%);
 text-align:center;
 font-size:28px;
-line-height:1.7;
-width:360px;
-z-index:5;
+line-height:1.6;
 }
 
-/* =====================
-   日期區
-===================== */
-.date-section{
+/* ======================
+   3. 日期區
+====================== */
+.date{
 position:relative;
 }
 
-.date-section img{
+.date img{
 width:100%;
 height:100vh;
 object-fit:cover;
-border:10px solid #fff;
+object-position:top center;
+}
+
+.date::before{
+content:"";
+position:absolute;
+inset:12px;
+border:2px solid #fff;
+z-index:2;
 }
 
 .date-text{
@@ -123,19 +119,19 @@ top:50%;
 transform:translate(-50%,-50%);
 font-size:34px;
 color:#fff;
-z-index:2;
+z-index:3;
 }
 
-/* =====================
-   地圖
-===================== */
+/* ======================
+   4. 地圖
+====================== */
 .location{
 text-align:center;
 padding:80px 20px;
 }
 
 .map-box{
-max-width:560px;
+max-width:500px;
 margin:auto;
 background:#eee;
 padding:16px;
@@ -156,10 +152,10 @@ transform:translate(-50%,-50%);
 padding:10px 18px;
 border-radius:999px;
 border:1px solid #333;
-background:rgba(255,255,255,0.85);
+background:#fff;
 text-decoration:none;
-color:#333;
 transition:0.3s;
+color:#333;
 }
 
 .map-link:hover{
@@ -172,78 +168,64 @@ text-align:left;
 margin-top:12px;
 }
 
-/* =====================
-   倒數
-===================== */
+/* ======================
+   5. 倒數
+====================== */
 .countdown{
 text-align:center;
-padding:60px 20px;
+padding:60px;
 font-size:28px;
 }
 
-/* =====================
-   手機版
-===================== */
+/* ======================
+   📱 手機版
+====================== */
 @media(max-width:768px){
 
 /* 封面 */
-.hero{
-background-position:center center;
-background-size:cover;
-}
-
 .hero-text{
 left:50%;
-bottom:18%;
+bottom:20%;
 transform:translateX(-50%);
 font-size:26px;
 text-align:center;
-width:100%;
-white-space:nowrap;
-}
-
 }
 
 /* 新人 */
 .couple{
-height:360px;
-padding:20px 10px;
+height:auto;
+padding:40px 10px;
 }
 
-/* 手機圖片 */
 .couple img{
-width:34%;
-max-width:130px;
+width:120px;
 }
 
-/* 男生 */
+/* 男 */
 .groom{
 left:5%;
 top:10px;
 }
 
-/* 女生 */
+/* 女 */
 .bride{
 right:5%;
 bottom:10px;
 }
 
-/* 文字 */
+/* 中間文字 */
 .names{
 font-size:16px;
-width:120px;
 line-height:1.4;
+width:140px;
 }
 
+/* 日期 */
+.date img{
+height:40vh;
+object-position:top;
 }
-   
-/* =====================
-   按鈕 hover（桌機）
-===================== */
-@media(min-width:769px){
-.map-link:hover{
-transform:translate(-50%,-50%) scale(1.05);
-}
+
 }
 
 </style>
@@ -259,53 +241,32 @@ transform:translate(-50%,-50%) scale(1.05);
 <!-- 新人 -->
 <section class="couple">
 
-<!-- 桌機版 -->
-<div class="couple-desktop">
 <img src="photo8.jpg" class="groom">
-<img src="photo7.jpg" class="bride">
 
 <div class="names">
-徐王麟 & 李亦晴<br>We tied the knot.
-</div>
-</div>
-
-</section>
-
-<!-- 手機新人 -->
-<section class="mobile-couple">
-
-<div class="groom-box">
-<img src="photo8.jpg">
-<div class="name-vertical">徐王麟</div>
+徐王林 &amp; 李亦晴<br>
+<span class="en">We tied the knot.</span>
 </div>
 
-<div class="center-text">
-We<br>
-tied<br>
-the<br>
-knot
-</div>
-
-<div class="bride-box">
-<div class="name-vertical">李亦晴</div>
-<img src="photo7.jpg">
-</div>
+<img src="photo7.jpg" class="bride">
 
 </section>
 
 <!-- 日期 -->
-<section class="date-section">
+<section class="date">
 <div class="date-text en">10.03</div>
 <img src="photo9.jpg">
 </section>
 
 <!-- 地圖 -->
 <section class="location">
+
 <div class="map-box">
 <a class="map-link" href="https://maps.app.goo.gl/QE6gDtQd72aYG2VS8">Google Map</a>
 <img src="JUN_0172.jpg">
 <div class="map-text">茹曦酒店<br>捷運</div>
 </div>
+
 </section>
 
 <!-- 倒數 -->

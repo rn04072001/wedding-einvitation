@@ -4,17 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
 <title>Wedding Invitation</title>
 <link rel="preload" as="image" href="photo5.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-   
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 
 /* ======================
@@ -23,7 +19,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;}
+font-family:"Noto Sans TC",serif;
 color:#333;
 }
 
@@ -51,10 +47,12 @@ backface-visibility:hidden;
 }
 
 .hero-text{
+font-family:"Ma Shan Zheng",cursive;
 position:absolute;
 left:25%;
 bottom:18%;
 font-size:40px;
+letter-spacing:2px;
 white-space:nowrap;
 animation:fade 1s ease;
 }
@@ -350,7 +348,7 @@ const now=new Date();
 const diff=weddingDate-now;
 const days=Math.max(0,Math.floor(diff/86400000));
 document.getElementById("countdown").innerText=
-"距離我們相聚還有" + days + "DAYS";
+"距離相聚還有" + days + "DAYS";
 }
 
 update();

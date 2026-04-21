@@ -30,34 +30,31 @@ width:100%;
    封面
 ===================== */
 .hero{
-height:100vh;
-background:url("photo5.jpg") center/cover no-repeat;
 position:relative;
-display:flex;
-align-items:flex-end;
-justify-content:flex-start;
-padding:60px 40px;
+height:100vh;
+width:100%;
+background:url("photo5.jpg") center center no-repeat;
+background-size:auto 100%;
+overflow:hidden;
 }
 
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(255,255,255,0.35);
+background:rgba(255,255,255,0.18);
 }
 
 .hero-text{
-position:relative;
+position:absolute;
 z-index:2;
-font-size:42px;
-letter-spacing:4px;
-animation:fadeUp 1.2s ease forwards;
-opacity:0;
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+left:34%;
+bottom:16%;
+transform:translateX(-50%);
+font-size:38px;
+letter-spacing:3px;
+white-space:nowrap;
+color:#222;
 }
 
 /* =====================
@@ -175,17 +172,22 @@ font-size:28px;
 ===================== */
 @media(max-width:768px){
 
-/* 封面：一行字 */
+/* 封面 */
 .hero{
-justify-content:center;
-align-items:flex-end;
-padding:0 20px 40px;
+background-position:center center;
+background-size:cover;
 }
 
 .hero-text{
-font-size:28px;
+left:50%;
+bottom:18%;
+transform:translateX(-50%);
+font-size:26px;
 text-align:center;
 width:100%;
+white-space:nowrap;
+}
+
 }
 
 /* 新人 */

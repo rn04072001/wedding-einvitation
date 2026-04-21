@@ -60,18 +60,32 @@ color:#222;
 /* =====================
    新人（電腦）
 ===================== */
-.couple{position:relative; height:900px; padding:100px 20px;}
+.couple{
+position:relative;
+max-width:1000px;
+margin:0 auto;
+padding:90px 20px;
+height:720px;
+}
 
-.couple img{width: 360px; position: absolute;}
-/* 男生：左上 */
+/* 圖片 */
+.couple img{
+width:32%;
+max-width:320px;
+height:auto;
+border-radius:10px;
+position:absolute;
+}
+
+/* 男生 左上 */
 .groom{
 left:8%;
 top:40px;
 }
 
-/* 女生：右下 */
+/* 女生 右下 */
 .bride{
-right:240%;
+right:8%;
 bottom:40px;
 }
 
@@ -82,7 +96,10 @@ left:50%;
 top:50%;
 transform:translate(-50%,-50%);
 text-align:center;
-font-size:25px;
+font-size:28px;
+line-height:1.7;
+width:360px;
+z-index:5;
 }
 
 /* =====================
@@ -189,54 +206,35 @@ white-space:nowrap;
 
 /* 新人 */
 .couple{
-position:relative !important;
-height:auto !important;
-padding:60px 20px !important;
-display:flex !important;
-flex-direction:column !important;
-align-items:center !important;
-gap:18px;
-overflow:hidden;
+height:360px;
+padding:20px 10px;
 }
 
-/* 清除桌機定位 */
-.groom,
-.bride{
-position:static !important;
-top:auto !important;
-bottom:auto !important;
-left:auto !important;
-right:auto !important;
-width:72% !important;
-max-width:260px !important;
-height:auto;
-display:block;
+/* 手機圖片 */
+.couple img{
+width:34%;
+max-width:130px;
 }
 
-/* 第一張往左 */
+/* 男生 */
 .groom{
-margin-right:20%;
+left:5%;
+top:10px;
 }
 
-/* 第二張往右 */
+/* 女生 */
 .bride{
-margin-left:20%;
-margin-top:-10px;
+right:5%;
+bottom:10px;
 }
 
-/* 文字壓在中間 */
+/* 文字 */
 .names{
-position:absolute !important;
-top:50% !important;
-left:50% !important;
-transform:translate(-50%,-50%) !important;
-width:78%;
-font-size:20px !important;
-line-height:1.8;
-text-align:center;
-z-index:10;
-background:rgba(255,255,255,0.72);
-padding:14px 10px;
+font-size:16px;
+width:120px;
+line-height:1.4;
+}
+
 }
    
 /* =====================

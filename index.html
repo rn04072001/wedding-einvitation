@@ -19,7 +19,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-font-family:"Noto Sans TC",serif;
+font-family:"Noto Serif TC","PingFang TC","Microsoft JhengHei",serif;
 color:#333;
 }
 
@@ -210,7 +210,7 @@ font-size:28px;
 .countdown,
 .map-text,
 .map-text .block{
-font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",serif;
 }
 
 /* 封面 */
@@ -348,7 +348,7 @@ const now=new Date();
 const diff=weddingDate-now;
 const days=Math.max(0,Math.floor(diff/86400000));
 document.getElementById("countdown").innerText=
-"距離相聚還有" + days + "DAYS";
+"距離我們相聚還有" + days + "DAYS";
 }
 
 update();

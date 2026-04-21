@@ -62,8 +62,6 @@ color:#222;
 ===================== */
 .couple{position:relative; height:900px; padding:100px 20px;}
 
-.couple-desktop{display: block;}
-.couple-mobile{display: none;}
 .couple img{width: 360px; position: absolute;}
 /* 男生：左上 */
 .groom{
@@ -85,7 +83,6 @@ top:50%;
 transform:translate(-50%,-50%);
 text-align:center;
 font-size:25px;
-line-height:1.7;
 }
 
 /* =====================
@@ -191,54 +188,57 @@ white-space:nowrap;
 }
 
 /* 新人 */
-.couple-desktop{
-    display: none;
-  }
+.couple{
+position:relative !important;
+height:auto !important;
+padding:60px 20px !important;
+display:flex !important;
+flex-direction:column !important;
+align-items:center !important;
+gap:18px;
+overflow:hidden;
+}
 
-  .couple-mobile{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 20px;
-  }
+/* 清除桌機定位 */
+.groom,
+.bride{
+position:static !important;
+top:auto !important;
+bottom:auto !important;
+left:auto !important;
+right:auto !important;
+width:72% !important;
+max-width:260px !important;
+height:auto;
+display:block;
+}
 
-  .groom-box,
-  .bride-box{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    width: 35%;
-  }
+/* 第一張往左 */
+.groom{
+margin-right:20%;
+}
 
-  .groom-box img,
-  .bride-box img{
-    width: 70px;
-    height: auto;
-  }
+/* 第二張往右 */
+.bride{
+margin-left:20%;
+margin-top:-10px;
+}
 
-  .name-vertical{
-    writing-mode: vertical-rl;
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .center-text{
-    width: 30%;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
+/* 文字壓在中間 */
+.names{
+position:absolute !important;
+top:50% !important;
+left:50% !important;
+transform:translate(-50%,-50%) !important;
+width:78%;
+font-size:20px !important;
+line-height:1.8;
+text-align:center;
+z-index:10;
+background:rgba(255,255,255,0.72);
+padding:14px 10px;
 }
    
-/* 日期 */
-.date-section img{
-height:40vh;
-border:6px solid #fff;
-}
-
-}
-
 /* =====================
    按鈕 hover（桌機）
 ===================== */

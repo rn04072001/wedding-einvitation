@@ -17,22 +17,11 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;}
 color:#333;
 }
 
-/* 全站中文字體 */
-body,
-.hero-text,
-.names,
-.date-text,
-.location,
-.map-text,
-.map-text .block,
-.countdown{
-font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-}
-
-.en{font-family:"Playfair Display","Times New Roman",serif;}
+.en{font-family:"Playfair Display",serif;}
 
 /* ======================
    SECTION
@@ -210,6 +199,15 @@ font-size:28px;
 ====================== */
 @media(max-width:768px){
 
+/* 手機版字體修正 */
+.hero-text,
+.names,
+.date-text,
+.countdown,
+.map-text,
+.map-text .block{
+font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+}
 
 /* 封面 */
 .hero{
@@ -346,7 +344,7 @@ const now=new Date();
 const diff=weddingDate-now;
 const days=Math.max(0,Math.floor(diff/86400000));
 document.getElementById("countdown").innerText=
-"距離我們相聚還有" + days + "DAYS";
+"距離相聚還有" + days + "DAYS";
 }
 
 update();

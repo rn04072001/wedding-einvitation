@@ -471,7 +471,7 @@ letter-spacing:1px;
 <section class="countdown en" id="countdown"></section>
 
 <!-- 🎵 音樂 -->
-<audio id="bgm" autoplay loop muted>
+<audio id="bgm" autoplay loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -480,11 +480,14 @@ letter-spacing:1px;
 </div>
 
 <script>
-document.addEventListener("click",function(){
+function toggleMusic(){
   const bgm = document.getElementById('bgm');
-  bgm.muted = false;
-  bgm.play();
-}, { once:ture });
+  if(bgm.paused){
+    bgm.play();
+  }else{
+    bgm.pause();
+  }
+}
 </script>
 
 <script>
@@ -500,6 +503,15 @@ document.getElementById("countdown").innerText=
 
 update();
 setInterval(update,1000);
+</script>
+
+<script>
+window.addEventListener("load", function(){
+  const bgm = document.getElementById("bgm");
+  bgm.play().catch(() => {
+    console.log("自動播放被瀏覽器阻擋");
+  });
+});
 </script>
 
 </body>

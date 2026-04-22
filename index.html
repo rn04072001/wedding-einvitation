@@ -21,7 +21,8 @@
 body{
 font-family:"Noto Serif TC","PingFang TC","Microsoft JhengHei",serif;
 color:#333;
-background-color:#f3ebe2
+background-color:#f9f3ed;
+background-image:linear-gradient(to bottom,#f9f3ed,#ffffff);
 }
 
 .en{
@@ -458,7 +459,7 @@ const now=new Date();
 const diff=weddingDate-now;
 const days=Math.max(0,Math.floor(diff/86400000));
 document.getElementById("countdown").innerText=
-"距離相聚還有" + days + "DAYS";
+"距離我們相聚還有" + days + "DAYS";
 }
 
 update();

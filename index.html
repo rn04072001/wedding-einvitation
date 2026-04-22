@@ -109,6 +109,7 @@ z-index:5
 ====================== */
 .date{
 position:relative;
+overflow:hidden;
 }
 
 .date img{
@@ -134,6 +135,21 @@ transform:translate(-50%,-50%);
 font-size:34px;
 color:#fff;
 z-index:3;
+}
+
+.calendar-overlay{
+position:absolute;
+left:4%;
+bottom:5%;
+width:42%;
+z-index:5;
+}
+
+.calendar-overlay img{
+width:100%;
+display:block;
+opacity:0.95;
+filter:brightness(1.05);
 }
    
 /* ======================
@@ -389,8 +405,10 @@ letter-spacing:1px;
 
 <!-- 日期 -->
 <section class="date">
-<div class="date-text">10.03</div>
 <img src="photo9.jpg">
+<div class="calendar-overlay">
+<img src="calendar.png">
+</div>
 </section>
 
 <!-- 流程 -->

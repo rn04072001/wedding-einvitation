@@ -471,7 +471,7 @@ letter-spacing:1px;
 <section class="countdown en" id="countdown"></section>
 
 <!-- 🎵 音樂 -->
-<audio id="bgm" loop>
+<audio id="bgm" autoplay loop muted>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -480,14 +480,11 @@ letter-spacing:1px;
 </div>
 
 <script>
-function toggleMusic(){
+document.addEventListener("click",function(){
   const bgm = document.getElementById('bgm');
-  if(bgm.paused){
-    bgm.play();
-  }else{
-    bgm.pause();
-  }
-}
+  bgm.muted = false;
+  bgm.play();
+}, { once:ture });
 </script>
 
 <script>

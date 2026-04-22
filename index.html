@@ -248,6 +248,25 @@ font-size:28px;
 }
 
 /* ======================
+   7. 音樂按鈕
+====================== */
+.music-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+cursor:pointer;
+font-size:20px;
+}
+
+/* ======================
    📱 手機版
 ====================== */
 @media(max-width:768px){
@@ -450,6 +469,26 @@ letter-spacing:1px;
 
 <!-- 倒數 -->
 <section class="countdown en" id="countdown"></section>
+
+<!-- 🎵 音樂 -->
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-btn" onclick="toggleMusic()">
+🎵
+</div>
+
+<script>
+function toggleMusic(){
+  const bgm = document.getElementById('bgm');
+  if(bgm.paused){
+    bgm.play();
+  }else{
+    bgm.pause();
+  }
+}
+</script>
 
 <script>
 const weddingDate=new Date("2026-10-03T12:30:00");

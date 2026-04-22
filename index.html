@@ -471,7 +471,7 @@ letter-spacing:1px;
 <section class="countdown en" id="countdown"></section>
 
 <!-- 🎵 音樂 -->
-<audio id="bgm" loop>
+<audio id="bgm" autoplay loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -480,8 +480,17 @@ letter-spacing:1px;
 </div>
 
 <script>
+const bgm = document.getElementById("bgm");
+
+/* 進頁面先嘗試自動播放 */
+window.addEventListener("load", function () {
+  bgm.play().catch(function () {
+    console.log("自動播放被阻擋");
+  });
+});
+
+/* 按鈕控制播放 / 暫停 */
 function toggleMusic(){
-  const bgm = document.getElementById('bgm');
   if(bgm.paused){
     bgm.play();
   }else{
@@ -498,7 +507,7 @@ const now=new Date();
 const diff=weddingDate-now;
 const days=Math.max(0,Math.floor(diff/86400000));
 document.getElementById("countdown").innerText=
-"距離我們相聚還有" + days + "DAYS";
+"距離相聚還有" + days + "DAYS";
 }
 
 update();

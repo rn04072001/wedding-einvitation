@@ -142,19 +142,19 @@ z-index:3;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 60px;
 }
 
 /* 左右區塊 */
 .timeline-item{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 /* 圖片 */
 .timeline-img{
-  width: 60px;   /* 可自行調整 */
+  width: 120px;   /* 可自行調整 */
   height: auto;
   display: block;
 }
@@ -162,17 +162,17 @@ z-index:3;
 /* 文字 */
 .timeline-text .time{
   font-weight: bold;
-  font-size: 16px;
+  font-size: 32px;
 }
 
 .timeline-text .desc{
-  font-size: 14px;
+  font-size: 32px;
 }
 
 /* 中間線 */
 .timeline-line{
-  width: 2px;
-  height: 80px;
+  width: 3px;
+  height: 100px;
   background: #ccc;
 }
 
@@ -362,12 +362,12 @@ letter-spacing:1px;
 <!-- 流程 -->
 <div class="timeline">
 <!-- 左區塊 -->
+<div class="timeline-item left">
 <div class="timeline-text">
 <div class="time">12:00 PM</div>
 <div class="desc">午宴入席</div>
-<div class="timeline-item left">
-<img src="chair.png" class="timeline-img">
 </div>
+<img src="chair.png" class="timeline-img">
 </div>
 
 <!-- 中間分隔線 -->

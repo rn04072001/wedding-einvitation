@@ -190,7 +190,7 @@ padding:80px 20px;
 }
 
 .map-box{
-max-width:500px;
+max-width:550px;
 margin:auto;
 background:#e6ddd5;
 padding:16px;
@@ -200,27 +200,31 @@ text-align:left;
 
 .map-box img{
 width:100%;
-aspect-ratio:1/1;
-object-fit:cover;
+height:auto;
+
+display:block;
+margin:0 auto;
+
+border-radius:12px;
 }
 
 .map-link{
 position:absolute;
 left:50%;
-top:25%;
+top:44%;
 transform:translate(-50%,-50%);
 padding:10px 18px;
 border-radius:999px;
 border:1px solid #333;
-background:#fff;
+background:rgba(244,238,230,0.6);
 text-decoration:none;
 transition:0.3s;
 color:#333;
 }
 
 .map-link:hover{
-background:#333;
-color:#fff;
+background:rgba(255,255,255,0.8);
+transform:translate(-50%,-50%) scale(1.03);
 }
 
 .map-text{
@@ -228,13 +232,13 @@ text-align:left;
 font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
 margin-top:12px;
 line-height:1.7;
-font-size:14px;
+font-size:16px;
 color:#222;
 }
 
 .map-text .block{
 margin-bottom:14px;
-letter-spacing:0.5px;
+letter-spacing:1px;
 font-weight:400;
 }
 
@@ -445,7 +449,7 @@ letter-spacing:1px;
 
 <div class="map-box">
 <a class="map-link" href="https://maps.app.goo.gl/QE6gDtQd72aYG2VS8">Google Map</a>
-<img src="JUN_0172.jpg">
+<img src="map1.png">
 <div class="map-text">
 <div class="block">   
 茹曦酒店Illume Taipei<br>105臺北市松山區敦化北路100號5樓
